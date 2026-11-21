@@ -1,0 +1,153 @@
+
+.product-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 25px;
+}
+
+.product-header h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.product-header p {
+    font-size: 14px;
+}
+
+.product-form-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 28px;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+}
+
+.product-form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 28px;
+}
+
+.product-form-header h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.product-form-header p {
+    font-size: 14px;
+}
+
+.product-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.product-form .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.product-form .form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #374151;
+}
+
+.product-form textarea {
+    resize: vertical;
+    min-height: 110px;
+}
+
+.product-form .form-error {
+    color: #dc2626;
+    font-size: 12px;
+}
+
+.product-dimensions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.product-form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    padding-top: 20px;
+    border-top: 1px solid #e5e7eb;
+}
+
+
+.product-table {
+    width: 100%;
+    overflow-x: auto;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+}
+
+.product-table table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.product-table th {
+    padding: 16px;
+    background: #f9fafb;
+    color: #6b7280;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.product-table td {
+    padding: 16px;
+    border-top: 1px solid #e5e7eb;
+    color: #374151;
+    font-size: 14px;
+}
+
+.product-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.product-actions form {
+    display: inline;
+}
+
+.action-edit,
+.action-delete {
+    border: none;
+    background: transparent;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.action-edit {
+    color: #2563eb;
+}
+
+.action-delete {
+    color: #dc2626;
+}
+
+.empty-data {
+    text-align: center;
+    padding: 35px !important;
+    color: #9ca3af !important;
+}
+
+.product-table .pagination-wrapper {
+    padding: 18px;
+    border-top: 1px solid #e5e7eb;
+}
