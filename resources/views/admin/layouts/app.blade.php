@@ -36,6 +36,10 @@
                 <a href="{{ route('brands.index') }}" class="sidebar-link">
                     <span>Brand</span>
                 </a>
+
+                <a href="{{ route('ekspedisi.index') }}" class="sidebar-link">
+                    <span>Ekspedisi</span>
+                </a>
             </div>
         </nav>
 

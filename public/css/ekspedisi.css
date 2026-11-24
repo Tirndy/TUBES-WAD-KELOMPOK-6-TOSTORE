@@ -1,0 +1,152 @@
+
+.ekspedisi-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.ekspedisi-header h1 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #172033;
+}
+
+.ekspedisi-header p {
+    margin-top: 5px;
+    color: #718096;
+    font-size: 14px;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 12px 18px;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background: #1d4ed8;
+}
+
+.ekspedisi-table {
+    background: white;
+    border: 1px solid #e5eaf1;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.ekspedisi-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.ekspedisi-table th,
+.ekspedisi-table td {
+    padding: 16px 20px;
+    text-align: left;
+    border-bottom: 1px solid #edf0f5;
+    font-size: 13px;
+}
+
+.ekspedisi-table th {
+    background: #f8fafc;
+    color: #64748b;
+}
+
+.ekspedisi-table tbody tr:hover {
+    background: #fafcff;
+}
+
+.action-edit {
+    color: #2563eb;
+    font-weight: 700;
+}
+
+.action-delete {
+    color: #dc2626;
+    background: none;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.pagination-wrapper {
+    padding: 18px 20px;
+}
+
+.ekspedisi-form {
+    max-width: 850px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 28px;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+}
+
+.ekspedisi-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    color: #374151;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 11px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #2563eb;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    padding-top: 20px;
+    border-top: 1px solid #e5e7eb;
+}
+
+.error-message {
+    color: #dc2626;
+    font-size: 12px;
+}
+
+@media (max-width: 700px) {
+    .ekspedisi-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .ekspedisi-table {
+        overflow-x: auto;
+    }
+
+    .ekspedisi-table table {
+        min-width: 800px;
+    }
+}
