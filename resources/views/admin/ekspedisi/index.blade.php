@@ -44,9 +44,17 @@
                     <td>{{ $ekspedisi->zona }}</td>
                     <td>Rp{{ number_format($ekspedisi->tarif, 0, ',', '.') }}</td>
                     <td>{{ $ekspedisi->estimasi }}</td>
+
                     <td>
+                        <a href="{{ route('ekspedisi.show', $ekspedisi) }}"
+                           class="action-detail">
+                            Detail
+                        </a>
+
                         <a href="{{ route('ekspedisi.edit', $ekspedisi) }}"
-                           class="action-edit">Edit</a>
+                           class="action-edit">
+                            Edit
+                        </a>
 
                         <form action="{{ route('ekspedisi.destroy', $ekspedisi) }}"
                               method="POST"
