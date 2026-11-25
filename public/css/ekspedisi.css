@@ -150,3 +150,19 @@
         min-width: 800px;
     }
 }
+
+
+.action-detail {
+    display: inline-block;
+    padding: 6px 12px;
+    background-color: #B3CEE5;
+    color: #23415C;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 13px;
+    margin-right: 4px;
+}
+
+.action-detail:hover {
+    background-color: #91B7D8;
+}
