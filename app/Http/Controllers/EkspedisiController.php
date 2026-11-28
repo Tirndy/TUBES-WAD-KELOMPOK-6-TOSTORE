@@ -10,9 +10,7 @@ class EkspedisiController extends Controller
 
     private $zonaList = ['Jawa', 'Bali', 'Luar Jawa'];
 
-    /**
-     * Display a listing of the resource.
-     */
+    
     public function index()
     {
         $ekspedisis = Ekspedisi::latest()->paginate(10);
@@ -20,9 +18,7 @@ class EkspedisiController extends Controller
         return view('admin.ekspedisi.index', compact('ekspedisis'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
+   
     public function create()
     {
         return view('admin.ekspedisi.create', [
@@ -31,9 +27,6 @@ class EkspedisiController extends Controller
         ]);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
         $validated = $request->validate([
@@ -50,9 +43,7 @@ class EkspedisiController extends Controller
             ->with('success', 'Data ekspedisi berhasil ditambahkan.');
     }
 
-    /**
-     * Display the specified resource.
-     */
+    
     public function show(string $id)
     {
         $ekspedisi = Ekspedisi::findOrFail($id);
@@ -60,9 +51,7 @@ class EkspedisiController extends Controller
         return view('admin.ekspedisi.show', compact('ekspedisi'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
+    
     public function edit(string $id)
     {
         $ekspedisi = Ekspedisi::findOrFail($id);
@@ -74,9 +63,7 @@ class EkspedisiController extends Controller
         ]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
+    
     public function update(Request $request, string $id)
     {
         $validated = $request->validate([
@@ -94,9 +81,6 @@ class EkspedisiController extends Controller
             ->with('success', 'Data ekspedisi berhasil diperbarui.');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy(string $id)
     {
         $ekspedisi = Ekspedisi::findOrFail($id);
