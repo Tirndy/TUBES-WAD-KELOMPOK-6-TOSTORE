@@ -43,7 +43,6 @@ Route::get('/customer/checkout', function () {
 
 
 
-// CUSTOMER - SIMULASI PEMBAYARAN
 Route::get('/customer/pembayaran', function () {
 
     $ongkir = max(0, (int) request('ongkir', 0));
@@ -57,7 +56,6 @@ Route::get('/customer/pembayaran', function () {
 })->name('customer.pembayaran');
 
 
-// CUSTOMER - KONFIRMASI PEMBAYARAN
 Route::get('/customer/konfirmasi', function () {
     return view('customer.checkout.konfirmasi');
 })->name('customer.konfirmasi');
