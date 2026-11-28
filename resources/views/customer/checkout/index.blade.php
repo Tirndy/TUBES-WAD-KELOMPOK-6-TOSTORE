@@ -172,7 +172,6 @@
 
     updateTotal();
 
-    // LANJUT KE HALAMAN PEMBAYARAN
     document.getElementById('continue-payment').addEventListener('click', function () {
 
         const selected = document.querySelector(

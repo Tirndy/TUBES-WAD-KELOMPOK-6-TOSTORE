@@ -21,37 +21,39 @@
     </a>
 </div>
 
-<div class="ekspedisi-form">
-    <div class="form-group">
+<div class="detail-ekspedisi-card">
+
+    <div class="detail-ekspedisi-item">
         <label>Nama Ekspedisi</label>
         <p>{{ $ekspedisi->nama_ekspedisi }}</p>
     </div>
 
-    <div class="form-group">
+    <div class="detail-ekspedisi-item">
         <label>Jenis Layanan</label>
         <p>{{ $ekspedisi->layanan }}</p>
     </div>
 
-    <div class="form-group">
+    <div class="detail-ekspedisi-item">
         <label>Zona Pengiriman</label>
         <p>{{ $ekspedisi->zona }}</p>
     </div>
 
-    <div class="form-group">
+    <div class="detail-ekspedisi-item">
         <label>Tarif Pengiriman</label>
         <p>Rp{{ number_format($ekspedisi->tarif, 0, ',', '.') }}</p>
     </div>
 
-    <div class="form-group">
+    <div class="detail-ekspedisi-item">
         <label>Estimasi Pengiriman</label>
         <p>{{ $ekspedisi->estimasi }}</p>
     </div>
 
-    <div class="form-actions">
+    <div class="detail-ekspedisi-actions">
         <a href="{{ route('ekspedisi.edit', $ekspedisi) }}" class="btn-primary">
             Edit Ekspedisi
         </a>
     </div>
+
 </div>
 
 @endsection
