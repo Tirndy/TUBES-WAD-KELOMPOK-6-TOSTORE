@@ -1,4 +1,5 @@
 <?php
+
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\BrandController;
@@ -7,6 +8,7 @@ use App\Http\Controllers\EkspedisiController;
 use App\Models\Product;
 use App\Models\Category;
 use App\Models\Brand;
+use App\Models\Ekspedisi;
 
 Route::get('/', function () {
     return redirect()->route('products.index');
@@ -31,3 +33,29 @@ Route::prefix('admin')->group(function () {
     Route::resource('products', ProductController::class);
     Route::resource('ekspedisi', EkspedisiController::class);
 });
+
+// CUSTOMER - CHECKOUT
+Route::get('/customer/checkout', function () {
+    $ekspedisis = Ekspedisi::orderBy('tarif', 'asc')->get();
+
+    return view('customer.checkout.index', compact('ekspedisis'));
+})->name('customer.checkout');
+
+
+
+Route::get('/customer/pembayaran', function () {
+
+    $ongkir = max(0, (int) request('ongkir', 0));
+    $namaEkspedisi = request('namaEkspedisi', '-');
+
+    return view('customer.checkout.pembayaran', [
+        'ongkir' => $ongkir,
+        'namaEkspedisi' => $namaEkspedisi,
+    ]);
+
+})->name('customer.pembayaran');
+
+
+Route::get('/customer/konfirmasi', function () {
+    return view('customer.checkout.konfirmasi');
+})->name('customer.konfirmasi');

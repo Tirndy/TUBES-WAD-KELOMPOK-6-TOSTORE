@@ -32,6 +32,7 @@
                    name="nama_ekspedisi"
                    value="{{ old('nama_ekspedisi') }}"
                    placeholder="Contoh: JNE"
+                   maxlength="100"
                    required>
             @error('nama_ekspedisi')
                 <small class="error-message">{{ $message }}</small>
@@ -91,6 +92,7 @@
                    name="estimasi"
                    value="{{ old('estimasi') }}"
                    placeholder="Contoh: 2-3 hari"
+                   maxlength="50"
                    required>
             @error('estimasi')
                 <small class="error-message">{{ $message }}</small>

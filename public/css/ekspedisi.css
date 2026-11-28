@@ -22,16 +22,18 @@
     display: inline-block;
     padding: 12px 18px;
     border-radius: 8px;
-    background: #2563eb;
+    background: linear-gradient(135deg, #367fc5, #20558f);
     color: white;
     font-size: 13px;
     font-weight: 700;
     border: none;
     cursor: pointer;
+    text-decoration: none;
+    transition: 0.2s ease;
 }
 
 .btn-primary:hover {
-    background: #1d4ed8;
+    background: linear-gradient(135deg, #286cae, #194574);
 }
 
 .ekspedisi-table {
@@ -39,6 +41,7 @@
     border: 1px solid #e5eaf1;
     border-radius: 12px;
     overflow: hidden;
+    box-shadow: 0 4px 15px rgba(30, 64, 100, 0.06);
 }
 
 .ekspedisi-table table {
@@ -55,25 +58,64 @@
 }
 
 .ekspedisi-table th {
-    background: #f8fafc;
-    color: #64748b;
+    background: #edf5fc;
+    color: #315675;
+    font-weight: 700;
 }
 
 .ekspedisi-table tbody tr:hover {
-    background: #fafcff;
+    background: #f7fbff;
+}
+
+.action-detail {
+    display: inline-block;
+    padding: 7px 12px;
+    background: #e8f3fc;
+    color: #315f87;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    margin-right: 4px;
+    transition: 0.2s ease;
+}
+
+.action-detail:hover {
+    background: #d2e7f8;
 }
 
 .action-edit {
-    color: #2563eb;
-    font-weight: 700;
+    display: inline-block;
+    padding: 7px 12px;
+    background: #e4f0ff;
+    color: #2563a6;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    margin-right: 4px;
+    transition: 0.2s ease;
+}
+
+.action-edit:hover {
+    background: #cfe3fb;
 }
 
 .action-delete {
-    color: #dc2626;
-    background: none;
+    display: inline-block;
+    padding: 7px 12px;
+    background: #fff0f0;
+    color: #dc4545;
+    border-radius: 6px;
     border: none;
-    font-weight: 700;
+    font-size: 13px;
+    font-weight: 600;
     cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.action-delete:hover {
+    background: #ffe0e0;
 }
 
 .pagination-wrapper {
@@ -87,6 +129,7 @@
     padding: 28px;
     border-radius: 12px;
     border: 1px solid #e5e7eb;
+    box-shadow: 0 4px 15px rgba(30, 64, 100, 0.06);
 }
 
 .ekspedisi-form form {
@@ -152,17 +195,58 @@
 }
 
 
-.action-detail {
+.btn-secondary {
     display: inline-block;
-    padding: 6px 12px;
-    background-color: #B3CEE5;
-    color: #23415C;
-    border-radius: 6px;
-    text-decoration: none;
+    padding: 12px 18px;
+    border-radius: 8px;
+    background: #e8f3fc;
+    color: #315f87;
     font-size: 13px;
-    margin-right: 4px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.2s ease;
 }
 
-.action-detail:hover {
-    background-color: #91B7D8;
+.btn-secondary:hover {
+    background: #d2e7f8;
+}
+
+.detail-ekspedisi-card {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 28px;
+    background: #fff;
+    border: 1px solid #e5eaf1;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(30, 64, 100, 0.06);
+}
+
+.detail-ekspedisi-item {
+    padding: 14px 0;
+    border-bottom: 1px solid #edf0f5;
+}
+
+.detail-ekspedisi-item:first-child {
+    padding-top: 0;
+}
+
+.detail-ekspedisi-item label {
+    display: block;
+    margin-bottom: 6px;
+    color: #718096;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.detail-ekspedisi-item p {
+    margin: 0;
+    color: #172033;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.detail-ekspedisi-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 24px;
 }

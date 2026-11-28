@@ -32,6 +32,7 @@
                    id="nama_ekspedisi"
                    name="nama_ekspedisi"
                    value="{{ old('nama_ekspedisi', $ekspedisi->nama_ekspedisi) }}"
+                   maxlength="100"
                    required>
             @error('nama_ekspedisi')
                 <small class="error-message">{{ $message }}</small>
@@ -87,6 +88,7 @@
                    id="estimasi"
                    name="estimasi"
                    value="{{ old('estimasi', $ekspedisi->estimasi) }}"
+                   maxlength="50"
                    required>
             @error('estimasi')
                 <small class="error-message">{{ $message }}</small>
