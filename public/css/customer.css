@@ -1,0 +1,763 @@
+
+/* ==============================
+   CUSTOMER - TOSTORE
+============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F4F7FB;
+    color: #26384A;
+}
+
+/* NAVBAR */
+
+.customer-navbar {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #E3EAF2;
+    padding: 18px 0;
+    box-shadow: 0 2px 8px rgba(30, 60, 90, 0.04);
+}
+
+.navbar-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.customer-logo {
+    font-size: 27px;
+    font-weight: bold;
+    color: #23415C;
+    text-decoration: none;
+}
+
+/* SEARCH */
+
+.navbar-search {
+    display: flex;
+    flex: 1;
+    max-width: 480px;
+}
+
+.navbar-search input {
+    width: 100%;
+    padding: 11px 15px;
+    border: 1px solid #D5E0EC;
+    border-radius: 7px 0 0 7px;
+    outline: none;
+    font-size: 14px;
+}
+
+.navbar-search input:focus {
+    border-color: #6B9BC6;
+}
+
+.navbar-search button {
+    padding: 11px 22px;
+    background-color: #356B9B;
+    color: white;
+    border: none;
+    border-radius: 0 7px 7px 0;
+    cursor: pointer;
+}
+
+.navbar-search button:hover {
+    background-color: #234F77;
+}
+
+/* NAVIGATION */
+
+.customer-nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.customer-nav a {
+    color: #40566D;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.customer-nav a:hover {
+    color: #356B9B;
+}
+
+/* MAIN CONTENT */
+
+.customer-main {
+    max-width: 1200px;
+    min-height: 75vh;
+    margin: 35px auto;
+    padding: 0 25px;
+}
+
+/* ALERT */
+
+.customer-alert {
+    padding: 13px 18px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.customer-alert.success {
+    background-color: #E3F5E9;
+    color: #247343;
+}
+
+.customer-alert.error {
+    background-color: #FCE8E8;
+    color: #A83232;
+}
+
+/* FOOTER */
+
+.customer-footer {
+    background-color: #FFFFFF;
+    border-top: 1px solid #E3EAF2;
+    padding: 25px;
+    text-align: center;
+    color: #75869A;
+    font-size: 13px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+    .navbar-container {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .navbar-search {
+        order: 3;
+        max-width: 100%;
+        flex-basis: 100%;
+    }
+
+    .customer-nav {
+        gap: 12px;
+    }
+
+    .customer-main {
+        padding: 0 15px;
+    }
+}
+
+
+/* ==============================
+   CHECKOUT CUSTOMER
+============================== */
+
+.checkout-page {
+    padding-bottom: 40px;
+}
+
+.checkout-heading {
+    margin-bottom: 25px;
+}
+
+.checkout-heading h1 {
+    font-size: 27px;
+    color: #23415C;
+    margin-bottom: 8px;
+}
+
+.checkout-heading p {
+    color: #78899B;
+    font-size: 14px;
+}
+
+.checkout-container {
+    display: grid;
+    grid-template-columns: 1.7fr 1fr;
+    gap: 25px;
+    align-items: start;
+}
+
+.checkout-left,
+.checkout-right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.checkout-card {
+    background: #FFFFFF;
+    border: 1px solid #E2EAF2;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 3px 12px rgba(35, 65, 92, 0.04);
+}
+
+.checkout-card h2 {
+    font-size: 18px;
+    color: #23415C;
+    margin-bottom: 18px;
+}
+
+.card-description {
+    color: #78899B;
+    font-size: 13px;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+
+/* ALAMAT */
+
+.address-box {
+    background: #F5F8FC;
+    border: 1px solid #E0EAF4;
+    border-radius: 9px;
+    padding: 18px;
+}
+
+.address-box div {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.address-box strong {
+    color: #23415C;
+}
+
+.address-box span {
+    color: #6D8195;
+    font-size: 13px;
+}
+
+.address-box p {
+    color: #52677D;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.address-box .address-label {
+    display: inline-block;
+    background: #DCEBFA;
+    color: #356B9B;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-top: 12px;
+}
+
+.simulation-note {
+    color: #96A3B0;
+    font-size: 11px;
+    margin-top: 12px;
+}
+
+/* PILIH EKSPEDISI */
+
+.shipping-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.shipping-option {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 16px;
+    border: 1px solid #E1E8F0;
+    border-radius: 9px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.shipping-option:hover {
+    border-color: #6B9BC6;
+    background: #F7FAFE;
+}
+
+.shipping-option:has(input:checked) {
+    border: 2px solid #477EAD;
+    background: #F0F6FC;
+    padding: 15px;
+}
+
+.shipping-option input {
+    accent-color: #356B9B;
+    width: 17px;
+    height: 17px;
+    flex-shrink: 0;
+}
+
+.shipping-info {
+    flex: 1;
+}
+
+.shipping-info div {
+    display: flex;
+    gap: 9px;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.shipping-info strong {
+    color: #23415C;
+    font-size: 14px;
+}
+
+.shipping-info span {
+    background: #E8F0F8;
+    color: #47749B;
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-size: 11px;
+}
+
+.shipping-info p {
+    color: #8190A0;
+    font-size: 12px;
+}
+
+.shipping-price {
+    color: #23415C;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+/* RINGKASAN PESANAN */
+
+.order-summary {
+    position: sticky;
+    top: 20px;
+}
+
+.product-summary {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #E8EDF3;
+    margin-bottom: 20px;
+}
+
+.product-placeholder {
+    width: 75px;
+    height: 75px;
+    background: #E7F0F8;
+    color: #47749B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    font-size: 12px;
+    flex-shrink: 0;
+}
+
+.product-summary strong {
+    color: #23415C;
+    font-size: 14px;
+}
+
+.product-summary p {
+    color: #8190A0;
+    font-size: 12px;
+    margin: 6px 0;
+}
+
+.product-summary span {
+    color: #356B9B;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.summary-line {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 17px;
+    font-size: 13px;
+    color: #75869A;
+}
+
+.summary-line strong {
+    color: #344D65;
+}
+
+.total-line {
+    border-top: 1px solid #E8EDF3;
+    padding-top: 18px;
+    margin-top: 20px;
+}
+
+.total-line strong {
+    color: #356B9B;
+    font-size: 17px;
+}
+
+.checkout-button {
+    width: 100%;
+    padding: 14px;
+    background: #356B9B;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.checkout-button:hover {
+    background: #234F77;
+}
+
+/* RESPONSIVE CHECKOUT */
+
+@media (max-width: 850px) {
+    .checkout-container {
+        grid-template-columns: 1fr;
+    }
+
+    .order-summary {
+        position: static;
+    }
+}
+
+@media (max-width: 480px) {
+    .checkout-card {
+        padding: 18px;
+    }
+
+    .shipping-option {
+        gap: 9px;
+        padding: 12px;
+    }
+
+    .shipping-price {
+        font-size: 12px;
+    }
+}
+
+/* =================================
+   CHECKOUT - MODERN BLUE DESIGN
+================================= */
+
+.checkout-page {
+    max-width: 1150px;
+    margin: 35px auto;
+    padding: 0 20px;
+}
+
+.checkout-heading {
+    margin-bottom: 28px;
+}
+
+.checkout-heading h1 {
+    font-size: 30px;
+    font-weight: 800;
+    color: #173b63;
+    margin-bottom: 8px;
+}
+
+.checkout-heading p {
+    color: #718096;
+    font-size: 14px;
+}
+
+.checkout-container {
+    display: grid;
+    grid-template-columns: 1.65fr 1fr;
+    gap: 24px;
+    align-items: start;
+}
+
+.checkout-left {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.checkout-card {
+    background: #ffffff;
+    border: 1px solid #e4ebf3;
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 5px 20px rgba(31, 67, 105, 0.05);
+}
+
+.checkout-card h2 {
+    font-size: 18px;
+    font-weight: 750;
+    color: #23476e;
+    margin-bottom: 18px;
+}
+
+.card-description {
+    color: #8291a5;
+    font-size: 13px;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+
+/* ALAMAT */
+
+.address-box {
+    background: #f3f8ff;
+    border: 1px solid #d8e8fb;
+    border-radius: 12px;
+    padding: 19px;
+    position: relative;
+}
+
+.address-box strong {
+    display: block;
+    color: #23476e;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.address-box span {
+    font-size: 13px;
+    color: #718096;
+}
+
+.address-box p {
+    color: #53677e;
+    font-size: 13px;
+    line-height: 1.7;
+    margin-top: 13px;
+}
+
+.address-label {
+    display: inline-block;
+    background: #dcecff;
+    color: #2463a5 !important;
+    padding: 5px 11px;
+    border-radius: 20px;
+    font-size: 11px !important;
+    font-weight: 700;
+    margin-top: 12px;
+}
+
+.simulation-note {
+    color: #94a3b8;
+    font-size: 11px;
+    margin-top: 13px;
+}
+
+/* PILIHAN EKSPEDISI */
+
+.shipping-options {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.shipping-option {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 17px;
+    border: 1.5px solid #e4ebf3;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.shipping-option:hover {
+    border-color: #80b5ed;
+    background: #f8fbff;
+}
+
+.shipping-option:has(input:checked) {
+    border-color: #367fc5;
+    background: #f0f7ff;
+    box-shadow: 0 3px 12px rgba(54, 127, 197, 0.08);
+}
+
+.shipping-option input {
+    width: 17px;
+    height: 17px;
+    accent-color: #347fc4;
+    flex-shrink: 0;
+}
+
+.shipping-info {
+    flex: 1;
+}
+
+.shipping-info div {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-bottom: 7px;
+}
+
+.shipping-info strong {
+    color: #284c72;
+    font-size: 14px;
+}
+
+.shipping-info span {
+    background: #e5f0fc;
+    color: #3475b5;
+    border-radius: 20px;
+    padding: 4px 9px;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.shipping-info p {
+    color: #8492a5;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.shipping-price {
+    color: #2469aa;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+/* RINGKASAN PESANAN */
+
+.checkout-right {
+    position: sticky;
+    top: 25px;
+}
+
+.order-summary h2 {
+    margin-bottom: 22px;
+}
+
+.product-summary {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid #edf1f5;
+    margin-bottom: 20px;
+}
+
+.product-placeholder {
+    width: 65px;
+    height: 65px;
+    border-radius: 12px;
+    background: #eaf3fd;
+    color: #397bb8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.product-summary strong {
+    color: #34516f;
+    font-size: 13px;
+}
+
+.product-summary p {
+    color: #8997a9;
+    font-size: 11px;
+    margin: 6px 0;
+}
+
+.product-summary span {
+    color: #286ba9;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.summary-line {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin: 16px 0;
+    color: #78899d;
+    font-size: 13px;
+}
+
+.summary-line strong {
+    color: #365675;
+}
+
+.total-line {
+    border-top: 1px dashed #d8e1eb;
+    padding-top: 19px;
+    margin-top: 22px;
+    color: #294b70;
+    font-weight: 700;
+}
+
+.total-line strong {
+    color: #236eb5;
+    font-size: 19px;
+}
+
+.checkout-button {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 13px;
+    background: linear-gradient(135deg, #367fc5, #20558f);
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.checkout-button:hover {
+    background: linear-gradient(135deg, #286eaf, #174779);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(32, 85, 143, 0.2);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+    .checkout-container {
+        grid-template-columns: 1fr;
+    }
+
+    .checkout-right {
+        position: static;
+    }
+}
+
+@media (max-width: 480px) {
+    .checkout-page {
+        padding: 0 12px;
+        margin: 25px auto;
+    }
+
+    .checkout-heading h1 {
+        font-size: 25px;
+    }
+
+    .checkout-card {
+        padding: 18px;
+    }
+
+    .shipping-option {
+        gap: 9px;
+        padding: 13px;
+    }
+
+    .shipping-price {
+        font-size: 12px;
+    }
+}
